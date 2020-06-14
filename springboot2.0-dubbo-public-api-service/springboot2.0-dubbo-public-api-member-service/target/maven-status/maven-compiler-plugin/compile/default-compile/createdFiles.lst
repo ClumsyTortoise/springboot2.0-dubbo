@@ -1,0 +1,5 @@
+com\xiaotao\App.class
+com\xiaotao\api\order\IOrderService.class
+com\xiaotao\api\member\entity\Order.class
+com\xiaotao\api\order\entity\Member.class
+com\xiaotao\api\member\IMemberService.class

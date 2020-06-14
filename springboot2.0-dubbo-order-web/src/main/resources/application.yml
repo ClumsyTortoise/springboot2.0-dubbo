@@ -1,0 +1,46 @@
+server:
+  port: 8001
+
+#dubbo:
+#  application:
+#  ##### 注册服务的名称
+#    name: order
+#      ###########采用协议和端口号################
+#    protocol:
+#      ###########采用dubbo协议####################
+#      name: dubbo
+#      ###########发布dubbo端口号为20880###########
+#      port: 20881
+#    ##### 注册中心地址
+#    registry:
+#      address: zookeeper://localhost:2181
+#    scan:
+#      ############实现类扫包范围###################
+#      base-packages: com.xiaotao.api.order.impl
+#    ##### 调用服务超时时间
+#    consumer:
+#      timeout: 5000
+
+dubbo:
+  application:
+    ###########注册到注册中心的名称############
+    name: order
+  ###########采用协议和端口号################
+  protocol:
+    ###########采用dubbo协议####################
+    name: dubbo
+    ###########发布dubbo端口号为20880###########
+    port: 20880
+  registry:
+    ###########注册中心地址#####################
+    address: zookeeper://localhost:2181
+  scan:
+    ############实现类扫包范围###################
+    base-packages: com.xiaotao.api.order.impl
+  consumer:
+    timeout: 5000
+#    group: member_group
+#    version: 1.0.0
+#  provider:
+#    group: order_goup
+#    version: 1.0.0
